@@ -1,15 +1,55 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+# Gradle
+.gradle/
+build/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local configuration file (sdk path, keystores, etc.)
 local.properties
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Exclude most .idea files but keep code style + inspections (optional)
+!.idea/codeStyles/
+!.idea/inspectionProfiles/
+
+# Log files
+*.log
+
+# Android Studio captures
+captures/
+
+# NDK / CMake
+.externalNativeBuild/
+.cxx/
+
+# Generated files
+*.apk
+*.ap_
+*.dex
+*.class
+*.so
+*.jar
+*.aar
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Kotlin/Java
+out/
+
+# Android Studio navigation editor temp files
+.navigation/
+
+# Crashlytics / Firebase
+crashlytics-build.properties
+fabric.properties
+
+# Gradle cache
+.gradle/
+
