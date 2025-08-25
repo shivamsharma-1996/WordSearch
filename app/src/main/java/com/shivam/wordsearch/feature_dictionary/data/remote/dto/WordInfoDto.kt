@@ -4,9 +4,9 @@ import com.shivam.wordsearch.feature_dictionary.data.local.entity.WordInfoEntity
 
 data class WordInfoDto(
     val meanings: List<MeaningDto>,
-    val phonetic: String,
+    val phonetic: String? = null,
     val phonetics: List<PhoneticDto>,
-    val sourceUrl: String,
+    val sourceUrl: String? = "",
     val word: String
 ) {
     fun toWordInfoEntity(): WordInfoEntity {
