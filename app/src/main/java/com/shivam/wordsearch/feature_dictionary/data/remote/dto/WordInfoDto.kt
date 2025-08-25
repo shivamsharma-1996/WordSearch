@@ -1,19 +1,19 @@
 package com.shivam.wordsearch.feature_dictionary.data.remote.dto
 
-import com.shivam.wordsearch.feature_dictionary.domain.model.WordInfo
+import com.shivam.wordsearch.feature_dictionary.data.local.entity.WordInfoEntity
 
 data class WordInfoDto(
     val meanings: List<MeaningDto>,
     val phonetic: String,
-    val phoneticDtos: List<PhoneticDto>,
-    val sourceUrls: List<String>,
+    val phonetics: List<PhoneticDto>,
+    val sourceUrl: String,
     val word: String
 ) {
-    fun toWordInfo(): WordInfo {
-        return WordInfo(
+    fun toWordInfoEntity(): WordInfoEntity {
+        return WordInfoEntity(
             meanings = meanings.map { it.toMeaning()},
             phonetic = phonetic,
-            sourceUrls = sourceUrls,
+            origin = sourceUrl ,
             word = word
         )
     }
